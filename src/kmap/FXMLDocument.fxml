@@ -1,0 +1,1269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kmap.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="mainBar" prefHeight="540.0" prefWidth="79.0" style="-fx-background-color: #15202B;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="881.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <RadioButton fx:id="LightTheme" layoutX="2.0" layoutY="465.0" mnemonicParsing="false" onMousePressed="#LightTheme" stylesheets="@../css/RadioButtons.css" text="Light Theme" textFill="WHITE" AnchorPane.bottomAnchor="69.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="465.0">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="9.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="Theme" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="DarkTheme" layoutX="2.0" layoutY="437.0" mnemonicParsing="false" onMousePressed="#DarkTheme" selected="true" stylesheets="@../css/RadioButtons.css" text="Dark Theme" textFill="WHITE" toggleGroup="$Theme" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="437.0">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="9.0" />
+               </font>
+            </RadioButton>
+            <Label fx:id="Var2_bar" layoutY="4.0" onMousePressed="#Var2Tap" style="-fx-alignment: center;" stylesheets="@../css/MainBarLabels.css" text="2 Var" textFill="WHITE" AnchorPane.bottomAnchor="527.32421875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle fill="#bb86fc" height="29.0" layoutX="10.0" layoutY="24.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" AnchorPane.bottomAnchor="504.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="4.0" />
+            <Label fx:id="Var3_bar" layoutX="9.0" layoutY="37.0" onMousePressed="#Var3Tap" style="-fx-alignment: center;" stylesheets="@../css/MainBarLabels.css" text="3 Var" textFill="WHITE" AnchorPane.bottomAnchor="494.32421875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle fill="#bb86fc" height="29.0" layoutX="23.0" layoutY="37.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" AnchorPane.bottomAnchor="494.32421875" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="37.0" />
+            <Label fx:id="Var4_bar" layoutX="8.0" layoutY="70.0" onMousePressed="#Var4Tap" style="-fx-alignment: center;" stylesheets="@../css/MainBarLabels.css" text="4 Var" textFill="WHITE" AnchorPane.bottomAnchor="461.32421875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle fill="#bb86fc" height="29.0" layoutX="75.0" layoutY="70.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" AnchorPane.bottomAnchor="461.32421875" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+            <Label fx:id="close_bar" layoutX="12.0" layoutY="483.0" onMousePressed="#close" style="-fx-alignment: center;" stylesheets="@../css/MainBarLabels.css" text="X" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="527.32421875">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle fill="#bb86fc" height="29.0" layoutX="26.0" layoutY="483.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="527.32421875" />
+            <Label fx:id="help_bar" layoutX="19.0" layoutY="495.0" onMousePressed="#VarHelpTap" style="-fx-alignment: center;" stylesheets="@../css/MainBarLabels.css" text="?" textFill="WHITE" AnchorPane.bottomAnchor="36.32421875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="495.0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Label>
+            <Rectangle fill="#bb86fc" height="29.0" layoutX="33.0" layoutY="495.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="4.0" AnchorPane.bottomAnchor="36.32421875" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="495.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="HelpPage" layoutX="90.0" prefHeight="540.0" prefWidth="870.0" style="-fx-background-color: #192734;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle fx:id="top_help" fill="#15202b" height="54.0" layoutX="20.0" layoutY="-2.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="870.0" AnchorPane.bottomAnchor="506.32421875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Rectangle fill="#03dac6" height="7.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="271.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="32.0" />
+            <Rectangle fill="#03dac6" height="7.0" layoutX="-1.0" layoutY="45.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="260.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="43.0" />
+            <Text fx:id="title_help" fill="WHITE" layoutX="49.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How To Use" AnchorPane.bottomAnchor="528.56787109375" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="747.73681640625" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="122.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K-Map simplifier" AnchorPane.bottomAnchor="528.56787109375" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="583.90771484375" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="subtitle_help" fill="WHITE" layoutX="24.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How To Use" AnchorPane.bottomAnchor="471.3095703125" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="760.189453125" AnchorPane.topAnchor="65.669921875">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="devoloped_help" fill="WHITE" layoutX="9.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by Mohammed Abdullah Al-Husseini" AnchorPane.bottomAnchor="6.4130859375" AnchorPane.leftAnchor="8.8232421875" AnchorPane.rightAnchor="542.1767578125" AnchorPane.topAnchor="532.9111328125">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="Contact_help" fill="WHITE" layoutX="10.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact me :" AnchorPane.bottomAnchor="42.4130859375" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="773.5595703125" AnchorPane.topAnchor="496.9111328125">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="Corner_help" fitHeight="208.0" fitWidth="611.0" layoutX="57.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="369.0" AnchorPane.rightAnchor="-110.0" AnchorPane.topAnchor="362.32421875">
+               <image>
+                  <Image url="@../Images/Cornar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="twitter_help" fitHeight="45.0" fitWidth="50.0" layoutX="105.0" layoutY="487.0" onMousePressed="#transferToTwitter" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="28.32421875" AnchorPane.leftAnchor="105.0" AnchorPane.rightAnchor="720.0" AnchorPane.topAnchor="487.0">
+               <image>
+                  <Image url="@../Images/Twitter_Logo_Blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="linkedin_help" fitHeight="32.0" fitWidth="45.0" layoutX="158.0" layoutY="493.0" onMousePressed="#transferToLinkedIn" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.32421875" AnchorPane.leftAnchor="158.0" AnchorPane.rightAnchor="680.0592594146729" AnchorPane.topAnchor="493.0">
+               <image>
+                  <Image url="@../Images/LI-In-Bug.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="text_help" fill="WHITE" layoutX="32.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Program provide 3 options (2 variable ,&#10;3 variable , or 4 variable k-map) choose the&#10;option you want.&#10;&#10;After that , the option's window will appear&#10;with 4 main fields&#10;&#10;From the first Field Chose SOP or POS. &#10;&#10;From the second Field you can choose the Organization &#10;whether it is ABCD or WXYZ.&#10;&#10;From the third Field you can assign main terms&#10;&#10;From the forth Field you can assig don't care &#10;condition terms&#10;&#10;For more details in the video!&#10;" AnchorPane.bottomAnchor="136.94189453125" AnchorPane.leftAnchor="32.0" AnchorPane.rightAnchor="470.55859375" AnchorPane.topAnchor="100.25244140625">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="video_help" fitHeight="274.0" fitWidth="440.0" layoutX="408.0" layoutY="79.0" onMousePressed="#transferToVid" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="233.82421875" AnchorPane.leftAnchor="408.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="78.5">
+               <image>
+                  <Image url="@../Images/Video.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="TComment_help" fill="WHITE" layoutX="549.0" layoutY="358.0" opacity="0.6" strokeType="OUTSIDE" strokeWidth="0.0" text="Click on the video to open it" wrappingWidth="157.0922753214836" AnchorPane.bottomAnchor="199.06494140625" AnchorPane.leftAnchor="549.0" AnchorPane.rightAnchor="163.9077246785164" AnchorPane.topAnchor="343.25927734375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="YoutubeH" fitHeight="32.0" fitWidth="45.0" onMousePressed="#transferToYoutube" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="36.19694519042969" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="618.0" AnchorPane.topAnchor="495.0">
+               <image>
+                  <Image url="@../Images/YouTube.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="Page4variable" layoutX="100.0" layoutY="10.0" prefHeight="540.0" prefWidth="870.0" style="-fx-background-color: #192734;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle fx:id="top_4" fill="#15202b" height="54.0" layoutX="20.0" layoutY="-2.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="870.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Rectangle fill="#03dac6" height="7.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="271.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="32.0" />
+            <Rectangle fill="#03dac6" height="7.0" layoutX="-1.0" layoutY="45.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="260.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="43.0" />
+            <Text fx:id="title_4" fill="WHITE" layoutX="27.0" layoutY="25.08740234375" strokeType="OUTSIDE" strokeWidth="0.0" text="4 Variable" AnchorPane.bottomAnchor="529.89208984375" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="747.19921875" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="122.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K-Map simplifier" AnchorPane.bottomAnchor="528.56787109375" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="583.90771484375" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="SP_4" fill="WHITE" layoutX="30.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want SOP or POS ?">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="devoloped_4" fill="WHITE" layoutX="9.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by Mohammed Abdullah Al-Husseini">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="Contact_4" fill="WHITE" layoutX="10.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact me :">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="Corner_4" fitHeight="208.0" fitWidth="611.0" layoutX="57.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-10.0" AnchorPane.rightAnchor="-110.0">
+               <image>
+                  <Image url="@../Images/Cornar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="twitter_4" fitHeight="45.0" fitWidth="50.0" layoutX="105.0" layoutY="487.0" onMousePressed="#transferToTwitter" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Twitter_Logo_Blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="linkedin_4" fitHeight="32.0" fitWidth="45.0" layoutX="158.0" layoutY="493.0" onMousePressed="#transferToLinkedIn" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.32421875">
+               <image>
+                  <Image url="@../Images/LI-In-Bug.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AX_4" fill="WHITE" layoutX="30.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you Want &quot;ABCD&quot; OR &quot;WXYZ&quot; ?">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="minterms_4" fill="WHITE" layoutX="30.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign main terms :">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="dontcare_4" fill="WHITE" layoutX="30.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign don't care terms:">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="RMzero_4" layoutX="30.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMone_4" layoutX="50.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMtwo_4" layoutX="70.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMthree_4" layoutX="90.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMfour_4" layoutX="110.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMfive_4" layoutX="130.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMsix_4" layoutX="150.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMseven_4" layoutX="170.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMeight_4" layoutX="190.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMnine_4" layoutX="210.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMten_4" layoutX="230.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMeleven_4" layoutX="250.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMtwelve_4" layoutX="270.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMthirteen_4" layoutX="290.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMfourteen_4" layoutX="310.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMfifteen_4" layoutX="330.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="64.0" layoutX="16.0" layoutY="252.0" stroke="#ffffff00" strokeType="INSIDE" strokeWidth="0.0" width="343.0" />
+            <Text fx:id="TMzero_4" fill="WHITE" layoutX="31.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMone_4" fill="WHITE" layoutX="51.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMtwo_4" fill="WHITE" layoutX="71.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMthree_4" fill="WHITE" layoutX="91.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMfour_4" fill="WHITE" layoutX="111.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMfive_4" fill="WHITE" layoutX="131.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMsix_4" fill="WHITE" layoutX="151.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMseven_4" fill="WHITE" layoutX="171.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMeight_4" fill="WHITE" layoutX="191.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMnine_4" fill="WHITE" layoutX="211.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMten_4" fill="WHITE" layoutX="231.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMeleven_4" fill="WHITE" layoutX="251.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMtwelve_4" fill="WHITE" layoutX="271.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMfourteen_4" fill="WHITE" layoutX="311.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMfifteen_4" fill="WHITE" layoutX="331.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMthirteen_4" fill="WHITE" layoutX="291.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="RDzero_4" layoutX="30.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDone_4" layoutX="50.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDtwo_4" layoutX="70.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDthree_4" layoutX="90.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDfour_4" layoutX="110.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDfive_4" layoutX="130.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDsix_4" layoutX="150.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDseven_4" layoutX="170.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDeight_4" layoutX="190.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDnine_4" layoutX="210.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDten_4" layoutX="230.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDeleven_4" layoutX="250.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDtwelve_4" layoutX="270.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDthirteen_4" layoutX="290.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDfourteen_4" layoutX="310.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDfifteen_4" layoutX="330.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffffff00" height="64.0" layoutX="14.0" layoutY="336.0" stroke="#ffffff00" strokeType="INSIDE" strokeWidth="0.0" width="343.0" />
+            <Text fx:id="TDzero_4" fill="WHITE" layoutX="31.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDone_4" fill="WHITE" layoutX="51.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDtwo_4" fill="WHITE" layoutX="71.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDthree_4" fill="WHITE" layoutX="91.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDfour_4" fill="WHITE" layoutX="111.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDfive_4" fill="WHITE" layoutX="131.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDsix_4" fill="WHITE" layoutX="151.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDseven_4" fill="WHITE" layoutX="171.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDeight_4" fill="WHITE" layoutX="191.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="8" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDnine_4" fill="WHITE" layoutX="211.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="9" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDten_4" fill="WHITE" layoutX="231.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDeleven_4" fill="WHITE" layoutX="251.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDtwelve_4" fill="WHITE" layoutX="271.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="12" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDfourteen_4" fill="WHITE" layoutX="311.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="14" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDfifteen_4" fill="WHITE" layoutX="331.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDthirteen_4" fill="WHITE" layoutX="291.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="13" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="SOP_4" layoutX="56.0" layoutY="105.0" mnemonicParsing="false" onAction="#setSP_4" selected="true" stylesheets="@../css/RadioButtons.css" text="SOP" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="s4p" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="POS_4" layoutX="148.0" layoutY="105.0" mnemonicParsing="false" onAction="#setSP_4" stylesheets="@../css/RadioButtons.css" text="POS" textFill="WHITE" toggleGroup="$s4p">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="ABCD_4" layoutX="56.0" layoutY="186.0" mnemonicParsing="false" onAction="#latters_4" selected="true" stylesheets="@../css/RadioButtons.css" text="ABCD" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="a4x" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="WXYZ_4" layoutX="148.0" layoutY="186.0" mnemonicParsing="false" onAction="#latters_4" stylesheets="@../css/RadioButtons.css" text="WXYZ" textFill="WHITE" toggleGroup="$a4x">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </RadioButton>
+            <Line fx:id="KL_4" endX="100.0" layoutX="431.0" layoutY="101.0" rotate="45.0" startX="65.0" stroke="WHITE" />
+            <Text fx:id="K12Latters_4" fill="WHITE" layoutX="490.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="AB">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K34Latters_4" fill="WHITE" layoutX="514.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CD">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="542.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="597.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="650.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="704.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="503.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="503.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="503.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="503.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="487.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="60.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="685.0" layoutY="107.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="60.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="746.0" layoutY="248.0" rotate="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="60.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="620.0" layoutY="362.0" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="60.0" />
+               </font>
+            </Text>
+            <Text fx:id="K1Latter_4" fill="WHITE" layoutX="474.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K2Latter_4" fill="WHITE" layoutX="763.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K4Latter_4" fill="WHITE" layoutX="629.0" layoutY="364.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K3Latter_4" fill="WHITE" layoutX="682.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            
+            <Rectangle fx:id="m15_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m11_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="275.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m14_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m10_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="275.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m12_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m8_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="275.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m13_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m9_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="275.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m3_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="113.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m7_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="167.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m2_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="113.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m6_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="167.0" smooth="false" width="55.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="m0_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="113.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m4_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="167.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m1_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="113.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m5_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="167.0" smooth="false" width="55.0" />
+            
+            <Text fx:id="K0_4" fill="WHITE" layoutX="547.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K1_4" fill="WHITE" layoutX="601.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K3_4" fill="WHITE" layoutX="656.0" layoutY="147.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K2_4" fill="WHITE" layoutX="709.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K4_4" fill="WHITE" layoutX="547.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K5_4" fill="WHITE" layoutX="601.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K7_4" fill="WHITE" layoutX="656.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K6_4" fill="WHITE" layoutX="709.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K12_4" fill="WHITE" layoutX="547.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K13_4" fill="WHITE" layoutX="601.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K15_4" fill="WHITE" layoutX="656.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K14_4" fill="WHITE" layoutX="709.0" layoutY="256.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K8_4" fill="WHITE" layoutX="547.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K9_4" fill="WHITE" layoutX="601.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K11_4" fill="WHITE" layoutX="656.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K10_4" fill="WHITE" layoutX="709.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="KR15_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="221.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR11_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="275.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR14_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="221.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR10_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="275.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR12_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="221.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR8_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="275.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR13_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="221.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR9_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="275.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR3_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="113.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR7_4" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="167.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR2_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="113.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR6_4" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="167.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="KR0_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="113.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR4_4" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="167.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR1_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="113.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR5_4" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="167.0" onMousePressed="#KClicks_4" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="resultBar_4" arcHeight="100.0" arcWidth="20.0" fill="#15202b" height="28.0" layoutX="53.0" layoutY="437.0" stroke="WHITE" strokeType="INSIDE" width="479.0" />
+            <Text fill="#bb86fc" layoutX="34.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="Tresult_4" fill="WHITE" layoutX="58.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="result_4" fill="WHITE" layoutX="30.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="RRMzero_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="30.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMone_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="50.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMtwo_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="70.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMthree_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="90.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMsix_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="150.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMfour_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="110.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMfive_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="130.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMtwelve_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="270.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMseven_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="170.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMeight_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="190.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMeleven_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="250.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMnine_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="210.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMten_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="230.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMfourteen_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="310.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMthirteen_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="290.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMfifteen_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="330.0" layoutY="257.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDzero_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="30.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDone_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="50.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDtwo_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="70.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDthree_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="90.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDsix_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="150.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDfour_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="110.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDfive_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="130.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDtwelve_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="270.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDseven_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="170.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDeight_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="190.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDeleven_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="250.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDnine_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="210.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDten_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="230.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDfourteen_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="310.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDthirteen_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="290.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDfifteen_4" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="330.0" layoutY="347.0" onMousePressed="#Clicks_4" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Text fill="#848484" layoutX="504.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*You can click on the karnaugh map directly !" AnchorPane.bottomAnchor="175.06494140625" AnchorPane.leftAnchor="504.0" AnchorPane.rightAnchor="107.7626953125" AnchorPane.topAnchor="368.25244140625">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="32.0" fitWidth="43.0" onMousePressed="#clear" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="309.0" AnchorPane.leftAnchor="191.0">
+               <image>
+                  <Image url="@../Images/clear.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="cl_4" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="40.0" onMousePressed="#clear" stroke="#ffffff00" strokeType="INSIDE" width="41.0" AnchorPane.bottomAnchor="305.0" AnchorPane.leftAnchor="187.0" />
+            <ImageView fx:id="youtube4" fitHeight="32.0" fitWidth="45.0" onMousePressed="#transferToYoutube" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="36.19694519042969" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="618.0" AnchorPane.topAnchor="495.0">
+               <image>
+                  <Image url="@../Images/YouTube.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Page3variable" layoutX="110.0" layoutY="20.0" prefHeight="540.0" prefWidth="870.0" style="-fx-background-color: #192734;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle fx:id="top_3" fill="#15202b" height="54.0" layoutX="20.0" layoutY="-2.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="870.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Rectangle fill="#03dac6" height="7.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="271.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="32.0" />
+            <Rectangle fill="#03dac6" height="7.0" layoutX="-1.0" layoutY="45.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="260.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="43.0" />
+            <Text fx:id="title_3" fill="WHITE" layoutX="27.0" layoutY="25.08740234375" strokeType="OUTSIDE" strokeWidth="0.0" text="3 Variable" AnchorPane.bottomAnchor="529.89208984375" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="747.19921875" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="122.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K-Map simplifier" AnchorPane.bottomAnchor="528.56787109375" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="583.90771484375" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="SP_3" fill="WHITE" layoutX="30.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want SOP or POS ?">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="devoloped_3" fill="WHITE" layoutX="9.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by Mohammed Abdullah Al-Husseini">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="Contact_3" fill="WHITE" layoutX="10.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact me :">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="Corner_3" fitHeight="208.0" fitWidth="611.0" layoutX="57.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-10.0" AnchorPane.rightAnchor="-110.0">
+               <image>
+                  <Image url="@../Images/Cornar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="twitter_3" fitHeight="45.0" fitWidth="50.0" layoutX="105.0" layoutY="487.0" onMousePressed="#transferToTwitter" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Twitter_Logo_Blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="linkedin_3" fitHeight="32.0" fitWidth="45.0" layoutX="158.0" layoutY="493.0" onMousePressed="#transferToLinkedIn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/LI-In-Bug.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AX_3" fill="WHITE" layoutX="30.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you Want &quot;ABC&quot; OR &quot;XYZ&quot; ?">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="minterms_3" fill="WHITE" layoutX="30.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign main terms :">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="dontcare_3" fill="WHITE" layoutX="30.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign don't care terms:">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="RMzero_3" layoutX="30.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMone_3" layoutX="50.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMtwo_3" layoutX="70.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMthree_3" layoutX="90.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMfour_3" layoutX="110.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMfive_3" layoutX="130.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMsix_3" layoutX="150.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMseven_3" layoutX="170.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="62.0" layoutX="15.0" layoutY="249.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="250.0" />
+            <Text fx:id="TMzero_3" fill="WHITE" layoutX="31.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMone_3" fill="WHITE" layoutX="51.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMtwo_3" fill="WHITE" layoutX="71.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMthree_3" fill="WHITE" layoutX="91.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMfour_3" fill="WHITE" layoutX="111.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMfive_3" fill="WHITE" layoutX="131.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMsix_3" fill="WHITE" layoutX="151.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMseven_3" fill="WHITE" layoutX="171.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="RRMzero_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="30.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMone_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="50.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMtwo_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="70.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMthree_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="90.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMsix_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="150.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMfour_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="110.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMfive_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="130.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMseven_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="170.0" layoutY="257.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <RadioButton fx:id="RDzero_3" layoutX="30.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDone_3" layoutX="50.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDtwo_3" layoutX="70.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDthree_3" layoutX="90.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDfour_3" layoutX="110.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDfive_3" layoutX="130.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDsix_3" layoutX="150.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDseven_3" layoutX="170.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="62.0" layoutX="15.0" layoutY="342.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="250.0" />
+            <Text fx:id="TDzero_3" fill="WHITE" layoutX="31.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDone_3" fill="WHITE" layoutX="51.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDtwo_3" fill="WHITE" layoutX="71.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDthree_3" fill="WHITE" layoutX="91.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDfour_3" fill="WHITE" layoutX="111.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDfive_3" fill="WHITE" layoutX="131.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDsix_3" fill="WHITE" layoutX="151.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="6" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDseven_3" fill="WHITE" layoutX="171.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="7" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="RRDzero_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="30.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDone_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="50.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDtwo_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="70.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDthree_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="90.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDsix_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="150.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDfour_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="110.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDfive_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="130.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDseven_3" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="170.0" layoutY="347.0" onMousePressed="#Clicks_3" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <RadioButton fx:id="SOP_3" layoutX="56.0" layoutY="105.0" mnemonicParsing="false" onAction="#setSP_3" selected="true" stylesheets="@../css/RadioButtons.css" text="SOP" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="s3p" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="POS_3" layoutX="148.0" layoutY="105.0" mnemonicParsing="false" onAction="#setSP_3" stylesheets="@../css/RadioButtons.css" text="POS" textFill="WHITE" toggleGroup="$s3p">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="ABC_3" layoutX="56.0" layoutY="186.0" mnemonicParsing="false" onAction="#latters_3" selected="true" stylesheets="@../css/RadioButtons.css" text="ABC" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="a3x" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="XYZ_3" layoutX="148.0" layoutY="186.0" mnemonicParsing="false" onAction="#latters_3" stylesheets="@../css/RadioButtons.css" text="XYZ" textFill="WHITE" toggleGroup="$a3x">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </RadioButton>
+            <Line fx:id="KL_3" endX="100.0" layoutX="431.0" layoutY="155.0" rotate="45.0" startX="65.0" stroke="WHITE" />
+            <Text fx:id="K1Latters_3" fill="WHITE" layoutX="499.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K23Latters_3" fill="WHITE" layoutX="514.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BC">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="542.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="597.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="01" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="650.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="11" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="704.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="511.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="511.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="685.0" layoutY="161.0" rotate="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="60.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="620.0" layoutY="307.0" rotate="270.0" strokeType="OUTSIDE" strokeWidth="0.0" text="{" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="60.0" />
+               </font>
+            </Text>
+            <Text fx:id="K3Latter_3" fill="WHITE" layoutX="628.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K2Latter_3" fill="WHITE" layoutX="682.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="m3_3" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="167.0" smooth="false" width="55.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="m7_3" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m2_3" fill="#ffffff00" height="55.0" layoutX="692.0" layoutY="160.0" smooth="false" width="55.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="m6_3" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="221.0" smooth="false" width="55.0" AnchorPane.rightAnchor="128.0" />
+            <Rectangle fx:id="m0_3" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="167.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m4_3" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m1_3" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="167.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m5_3" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Text fx:id="K0_3" fill="WHITE" layoutX="547.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K1_3" fill="WHITE" layoutX="601.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K3_3" fill="WHITE" layoutX="656.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K2_3" fill="WHITE" layoutX="709.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K4_3" fill="WHITE" layoutX="547.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K5_3" fill="WHITE" layoutX="601.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K7_3" fill="WHITE" layoutX="656.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K6_3" fill="WHITE" layoutX="709.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="KR3_3" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="167.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="KR7_3" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="221.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR2_3" fill="#ffffff00" height="55.0" layoutX="692.0" layoutY="160.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" AnchorPane.rightAnchor="128.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="KR6_3" fill="#ffffff00" height="55.0" layoutX="687.0" layoutY="221.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" AnchorPane.rightAnchor="128.0" />
+            <Rectangle fx:id="KR0_3" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="167.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR4_3" fill="#ffffff00" height="55.0" layoutX="525.0" layoutY="221.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR1_3" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="167.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR5_3" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="221.0" onMousePressed="#KClicks_3" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="resultBar_3" arcHeight="100.0" arcWidth="20.0" fill="#15202b" height="28.0" layoutX="53.0" layoutY="437.0" stroke="WHITE" strokeType="INSIDE" width="479.0" />
+            <Text fill="#bb86fc" layoutX="34.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="result_3" fill="WHITE" layoutX="58.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Tresult_3" fill="WHITE" layoutX="30.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#848484" strokeType="OUTSIDE" strokeWidth="0.0" text="*You can click on the karnaugh map directly !" AnchorPane.bottomAnchor="175.06494140625" AnchorPane.leftAnchor="504.0" AnchorPane.rightAnchor="107.7626953125" AnchorPane.topAnchor="368.25244140625">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="224.0" layoutY="205.0" onMousePressed="#clear" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="309.0" AnchorPane.leftAnchor="191.0">
+               <image>
+                  <Image url="@../Images/clear.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="cl_3" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="40.0" layoutX="119.0" layoutY="124.0" onMousePressed="#clear" stroke="#ffffff00" strokeType="INSIDE" width="41.0" AnchorPane.bottomAnchor="305.0" AnchorPane.leftAnchor="187.0" />
+            <ImageView fx:id="Youtube3" fitHeight="32.0" fitWidth="45.0" onMousePressed="#transferToYoutube" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="36.19694519042969" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="618.0" AnchorPane.topAnchor="495.0">
+               <image>
+                  <Image url="@../Images/YouTube.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="Page2variable" layoutX="120.0" layoutY="30.0" prefHeight="540.0" prefWidth="870.0" style="-fx-background-color: #192734;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle fx:id="top_2" fill="#15202b" height="54.0" layoutX="20.0" layoutY="-2.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="870.0" AnchorPane.bottomAnchor="506.32421875" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Rectangle fill="#03dac6" height="7.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="271.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="32.0" />
+            <Rectangle fill="#03dac6" height="7.0" layoutX="-1.0" layoutY="45.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" width="260.0" AnchorPane.bottomAnchor="509.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="599.0" AnchorPane.topAnchor="43.0" />
+            <Text fx:id="title_2" fill="WHITE" layoutX="27.0" layoutY="25.08740234375" strokeType="OUTSIDE" strokeWidth="0.0" text="2 Variable" AnchorPane.bottomAnchor="529.89208984375" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="747.19921875" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#bb86fc" layoutX="122.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="K-Map simplifier" AnchorPane.bottomAnchor="528.56787109375" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="583.90771484375" AnchorPane.topAnchor="2.08740234375">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="SP_2" fill="WHITE" layoutX="30.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you want SOP or POS ?" AnchorPane.leftAnchor="30.0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="devoloped_2" fill="WHITE" layoutX="9.0" layoutY="550.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by Mohammed Abdullah Al-Husseini">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="Contact_2" fill="WHITE" layoutX="10.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact me :">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="18.0" />
+               </font>
+            </Text>
+            <ImageView fx:id="Corner_2" fitHeight="208.0" fitWidth="611.0" layoutX="57.0" layoutY="182.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-10.0" AnchorPane.rightAnchor="-110.0">
+               <image>
+                  <Image url="@../Images/Cornar.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="twitter_2" fitHeight="45.0" fitWidth="50.0" layoutX="105.0" layoutY="487.0" onMousePressed="#transferToTwitter" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Twitter_Logo_Blue.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="linkedin_2" fitHeight="32.0" fitWidth="45.0" layoutX="158.0" layoutY="493.0" onMousePressed="#transferToLinkedIn" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/LI-In-Bug.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AX_2" fill="WHITE" layoutX="30.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Do you Want &quot;AB&quot; OR &quot;XY&quot; ?">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="minterms_2" fill="WHITE" layoutX="30.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign main terms :">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="dontcare_2" fill="WHITE" layoutX="30.0" layoutY="335.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Assign don't care terms:">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="RMzero_2" layoutX="30.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMone_2" layoutX="50.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMtwo_2" layoutX="70.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RMthree_2" layoutX="90.0" layoutY="287.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5288ba00" height="58.0" layoutX="13.0" layoutY="257.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+            <Text fx:id="TMzero_2" fill="WHITE" layoutX="31.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMone_2" fill="WHITE" layoutX="51.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMtwo_2" fill="WHITE" layoutX="71.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TMthree_2" fill="WHITE" layoutX="91.5" layoutY="275.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="RRMzero_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="30.0" layoutY="257.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMone_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="50.0" layoutY="257.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMtwo_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="70.0" layoutY="257.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRMthree_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="90.0" layoutY="257.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <RadioButton fx:id="RDzero_2" layoutX="30.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDone_2" layoutX="50.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDtwo_2" layoutX="70.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <RadioButton fx:id="RDthree_2" layoutX="90.0" layoutY="377.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="0.0" stylesheets="@../css/RadioButtons.css" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5288ba00" height="58.0" layoutX="15.0" layoutY="345.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+            <Text fx:id="TDzero_2" fill="WHITE" layoutX="31.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDone_2" fill="WHITE" layoutX="51.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDtwo_2" fill="WHITE" layoutX="71.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="TDthree_2" fill="WHITE" layoutX="91.5" layoutY="365.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3" textAlignment="CENTER" wrappingWidth="15.999983549118042">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="RRDzero_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="30.0" layoutY="347.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDone_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="50.0" layoutY="347.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDtwo_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="70.0" layoutY="347.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <Rectangle fx:id="RRDthree_2" arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="52.0" layoutX="90.0" layoutY="347.0" onMousePressed="#Clicks_2" stroke="WHITE" strokeType="INSIDE" width="19.0" />
+            <RadioButton fx:id="SOP_2" layoutX="56.0" layoutY="105.0" mnemonicParsing="false" onAction="#setSP_2" selected="true" stylesheets="@../css/RadioButtons.css" text="SOP" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="s2p" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="POS_2" layoutX="148.0" layoutY="105.0" mnemonicParsing="false" onAction="#setSP_2" stylesheets="@../css/RadioButtons.css" text="POS" textFill="WHITE" toggleGroup="$s2p">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="AB_2" layoutX="56.0" layoutY="186.0" mnemonicParsing="false" onAction="#latters_2" selected="true" stylesheets="@../css/RadioButtons.css" text="AB" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="a2x" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="XY_2" layoutX="148.0" layoutY="186.0" mnemonicParsing="false" onAction="#latters_2" stylesheets="@../css/RadioButtons.css" text="XY" textFill="WHITE" toggleGroup="$a2x">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </RadioButton>
+            <Line fx:id="KL_2" endX="100.0" layoutX="485.0" layoutY="155.0" rotate="45.0" startX="65.0" stroke="WHITE" />
+            <Text fx:id="K1Latters_2" fill="WHITE" layoutX="554.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K2Latters_2" fill="WHITE" layoutX="570.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="B">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="600.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="655.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="565.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fill="#03dac6" layoutX="565.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" textAlignment="CENTER">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="m0_2" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="167.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m1_2" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Rectangle fx:id="m2_2" fill="#ffffff00" height="55.0" layoutX="645.0" layoutY="200.0" smooth="false" width="55.0" AnchorPane.leftAnchor="633.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="m3_2" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="221.0" smooth="false" width="55.0" />
+            <Text fx:id="K0_2" fill="WHITE" layoutX="601.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K1_2" fill="WHITE" layoutX="655.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K2_2" fill="WHITE" layoutX="601.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="K3_2" fill="WHITE" layoutX="655.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Rectangle fx:id="KR0_2" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="167.0" onMousePressed="#KClicks_2" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR2_2" fill="#ffffff00" height="55.0" layoutX="579.0" layoutY="221.0" onMousePressed="#KClicks_2" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="KR1_2" fill="#ffffff00" height="55.0" layoutX="645.0" layoutY="200.0" onMousePressed="#KClicks_2" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" AnchorPane.leftAnchor="633.0" AnchorPane.topAnchor="167.0" />
+            <Rectangle fx:id="KR3_2" fill="#ffffff00" height="55.0" layoutX="633.0" layoutY="221.0" onMousePressed="#KClicks_2" smooth="false" stroke="WHITE" strokeType="INSIDE" width="55.0" />
+            <Rectangle fx:id="resultBar_2" arcHeight="100.0" arcWidth="20.0" fill="#15202b" height="28.0" layoutX="53.0" layoutY="437.0" stroke="WHITE" strokeType="INSIDE" width="479.0" />
+            <Text fill="#bb86fc" layoutX="34.0" layoutY="459.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fx:id="result_2" fill="WHITE" layoutX="58.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="20.0" />
+               </font>
+            </Text>
+            <Text fx:id="Tresult_2" fill="WHITE" layoutX="30.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Result:">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <Text fill="#848484" strokeType="OUTSIDE" strokeWidth="0.0" text="*You can click on the karnaugh map directly !" AnchorPane.bottomAnchor="175.06494140625" AnchorPane.leftAnchor="504.0" AnchorPane.rightAnchor="107.7626953125" AnchorPane.topAnchor="368.25244140625">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="15.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="32.0" fitWidth="43.0" layoutX="191.0" layoutY="224.0" onMousePressed="#clear" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="309.0" AnchorPane.leftAnchor="191.0">
+               <image>
+                  <Image url="@../Images/clear.png" />
+               </image>
+            </ImageView>
+            <Rectangle fx:id="cl_2" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="40.0" layoutX="187.0" layoutY="220.0" onMousePressed="#clear" stroke="#ffffff00" strokeType="INSIDE" width="41.0" AnchorPane.bottomAnchor="305.0" AnchorPane.leftAnchor="187.0" />
+            <ImageView fx:id="Youtube2" fitHeight="32.0" fitWidth="45.0" layoutX="207.0" layoutY="495.0" onMousePressed="#transferToYoutube" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="36.19694519042969" AnchorPane.leftAnchor="207.0" AnchorPane.rightAnchor="618.0" AnchorPane.topAnchor="495.0">
+               <image>
+                  <Image url="@../Images/YouTube.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
